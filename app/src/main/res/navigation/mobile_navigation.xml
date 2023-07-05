@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_culinary">
+
+    <fragment
+        android:id="@+id/navigation_culinary"
+        android:name="com.mytour.jumpapwt.ui.culinary.CulinaryFragment"
+        android:label="@string/title_culinary"
+        tools:layout="@layout/fragment_culinary" />
+
+    <fragment
+        android:id="@+id/navigation_hotel"
+        android:name="com.mytour.jumpapwt.ui.hotel.HotelFragment"
+        android:label="@string/title_hotel"
+        tools:layout="@layout/fragment_hotel" />
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.mytour.jumpapwt.ui.favorites.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_nature"
+        android:name="com.mytour.jumpapwt.ui.nature.NatureFragment"
+        android:label="@string/title_nature"
+        tools:layout="@layout/fragment_nature" />
+
+    <fragment
+        android:id="@+id/navigation_historic"
+        android:name="com.mytour.jumpapwt.ui.historic.HistoricFragment"
+        android:label="@string/title_historic"
+        tools:layout="@layout/fragment_historic" />
+</navigation>
