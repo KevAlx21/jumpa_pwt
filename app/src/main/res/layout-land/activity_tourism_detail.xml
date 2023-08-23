@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.tourism_detail.TourismDetailActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImageHolder"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="6dp"
+            android:scaleType="centerCrop"
+            android:transitionName="tourism_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RounderBorder"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNameDetail"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:transitionName="tourism_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivImageHolder"
+            tools:text="Warung Ayam Bakar 23" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRatingDetail"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_star_rate"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:transitionName="tourism_rating"
+            app:layout_constraintStart_toEndOf="@+id/tvNameDetail"
+            app:layout_constraintTop_toBottomOf="@+id/ivImageHolder"
+            tools:text="4,3" />
+
+        <TextView
+            android:id="@+id/tvDescDetail"
+            style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/ivImageHolder"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ivImageHolder"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameDetail"
+            tools:text="ini deskripsi" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPhoneDetail"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_telephone"
+            android:drawableTint="?attr/colorOnSecondary"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tvDescDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescDetail"
+            tools:text="081392166475" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOpenDetail"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_time"
+            android:drawableTint="?attr/colorOnSecondary"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvPhoneDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoneDetail"
+            tools:text="Hari Kerja, 06:30 - 22:00 WIB" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAddressDetail"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableTint="?attr/colorOnSecondary"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvOpenDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvOpenDetail"
+            tools:text="Jl. Kombas Gang 2, Mangunjaya" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/to_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvAddressDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddressDetail" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/add_favorite"
+            app:layout_constraintBottom_toTopOf="@+id/btnToLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_favorite_border"
+            app:tint="@color/pink_favorite" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
